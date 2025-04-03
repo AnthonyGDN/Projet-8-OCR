@@ -1,0 +1,145 @@
+.contact-page {
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .contact-page h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-page p {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  /**************************************
+    Liste et Liens
+  **************************************/
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-list li {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .contact-list a {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: #262626;
+    margin: 0 15px;
+    transition: color 0.3s;
+  }
+  
+  /**************************************
+    Animation des 4 <span>
+  **************************************/
+  .contact-list a span {
+    position: absolute;
+    transition: transform 0.5s;
+  }
+  
+  /* Barres horizontales */
+  .contact-list a span:nth-child(1),
+  .contact-list a span:nth-child(3) {
+    width: 100%;
+    height: 1px;
+    background: #262626;
+  }
+  
+  .contact-list a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform-origin: right;
+  }
+  .contact-list a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .contact-list a span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+  }
+  .contact-list a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  /* Barres verticales */
+  .contact-list a span:nth-child(2),
+  .contact-list a span:nth-child(4) {
+    width: 1px;
+    height: 100%;
+    background: #262626;
+  }
+  
+  .contact-list a span:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  .contact-list a:hover span:nth-child(2) {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  
+  .contact-list a span:nth-child(4) {
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .contact-list a:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  
+  /**************************************
+    Icône = image
+  **************************************/
+  .icon-img {
+    width: 80px; 
+    height: 80px;
+    margin-top: 10px;
+    transform-origin: center 150%;
+    transition: transform 0.5s;
+    pointer-events: none; 
+  }
+  
+  /* Au survol du <a>, on grandit l'image */
+  .contact-list a:hover .icon-img {
+    transform: scale(1.05);
+  }
+  
+  /* Effet au clic (disparition) */
+  .contact-list a:active .icon-img {
+    transform-origin: center 150%;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  .contact-list a:active span:nth-child(1),
+  .contact-list a:active span:nth-child(3) {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .contact-list a:active span:nth-child(2),
+  .contact-list a:active span:nth-child(4) {
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.5s;
+  }
+  
