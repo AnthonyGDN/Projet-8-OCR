@@ -19,7 +19,6 @@ body {
 }
 
 main {
-  max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -36,7 +35,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;  /* reste collée en haut */
+  position: sticky;  
   top: 0;
   z-index: 10;
 }
