@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Skills.css';
 
 function Skills() {
-  // Tableau d’objets décrivant chaque compétence
   const skillsData = [
     {
       id: 1,
@@ -106,7 +105,6 @@ function Skills() {
           </div>
         ))}
       </div>
-
       {selectedSkill && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
