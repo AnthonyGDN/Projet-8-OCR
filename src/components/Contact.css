@@ -143,3 +143,53 @@
     transition: transform 0.5s;
   }
   
+  /**************************************
+    Modal
+  **************************************/
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Au-dessus de tout */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .modal-content button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+  }
+  
+  .modal-content button:hover {
+    background-color: #555;
+  }

@@ -9,7 +9,7 @@ function Skills() {
       title: 'Maîtrise du HTML',
       image: '/SkillHTML.jpg', 
       description: `HyperText Markup Language (HTML) est le langage de base qui permet de structurer le contenu d’une page web 
-      (titres, paragraphes, images, formulaires, etc.).</br>
+      (titres, paragraphes, images, formulaires, etc.).</br></br> 
       Le fait de bien maîtriser le HTML garantit la création de pages claires, accessibles et correctement interprétées par les navigateurs, 
       ce qui est essentiel pour poser les fondations d’un site web robuste.`,
     },
@@ -18,7 +18,7 @@ function Skills() {
       title: 'Maîtrise du CSS',
       image: '/SkillCSS.png',
       description: `Cascading Style Sheets (CSS) est le langage qui gère l’aspect visuel des pages web 
-      (mise en page, couleurs, animations, adaptabilité mobile, etc.).</br> 
+      (mise en page, couleurs, animations, adaptabilité mobile, etc.).</br></br>  
       Savoir manipuler le CSS de manière efficace permet d’offrir une interface attractive et responsive, 
       améliorant significativement l’expérience utilisateur.`,
     },
@@ -33,7 +33,7 @@ function Skills() {
       id: 4,
       title: 'Maîtrise de NodeJS',
       image: '/SkillNODE.png',
-      description: `NodeJS permet d’exécuter du code JavaScript côté serveur et de créer des applications backend performantes.</br> 
+      description: `NodeJS permet d’exécuter du code JavaScript côté serveur et de créer des applications backend performantes.</br></br>  
       Cela facilite la création d’API, la gestion de bases de données, et l’implémentation de fonctionnalités en temps réel 
       (chat, notifications push, etc.).`,
     },
@@ -42,7 +42,7 @@ function Skills() {
       title: 'Maîtrise de React',
       image: '/SkillREACT.png',
       description: `React est une librairie JavaScript, très populaire pour construire des interfaces utilisateur modernes, 
-      réactives et performantes.</br> 
+      réactives et performantes.</br></br>  
       Elle facilite la création de composants réutilisables et la mise à jour instantanée de l’interface en fonction des 
       interactions de l’utilisateur, ce qui améliore nettement l’expérience de navigation.`,
     },
@@ -50,9 +50,9 @@ function Skills() {
       id: 6,
       title: 'Optimisation & Débogage',
       image: '/SkillOPTI.png',
-      description: `Savoir optimiser et déboguer un site web inclut plusieurs compétences :</br> 
-      Améliorer la vitesse de chargement, corriger les erreurs, assurer la compatibilité multi-navigateurs, etc.</br> 
-      Sur le plan du SEO (Search Engine Optimization), cela consiste à respecter les bonnes pratiques pour un meilleur 
+      description: `Savoir optimiser et déboguer un site web inclut plusieurs compétences :</br></br>  
+      • Améliorer la vitesse de chargement, corriger les erreurs, assurer la compatibilité multi-navigateurs, etc.</br></br>  
+      • Sur le plan du SEO (Search Engine Optimization), cela consiste à respecter les bonnes pratiques pour un meilleur 
       référencement dans les moteurs de recherche, et donc une meilleure visibilité du site.`,
     },
     {
@@ -60,8 +60,8 @@ function Skills() {
       title: 'Gestion de projet',
       image: '/SkillGESTION.png',
       description: `Au-delà de l’aspect purement technique, gérer un projet implique de savoir planifier les tâches, répartir le travail, 
-      surveiller l’avancement et garantir la livraison dans les délais.<br/> 
-      Ainsi, pour pouvoir assuré la gestion d'un projet je possède plusieurs compétences :</br>
+      surveiller l’avancement et garantir la livraison dans les délais.<br/></br> 
+      Ainsi, pour pouvoir assuré la gestion d'un projet je possède plusieurs compétences :</br></br>
       • la connaissance d’outils de gestion de projet (Trello, Jira, Asana, etc.)</br>
       • la mise en place d’une veille technique pour rester à jour</br>
       • la maîtrise de méthodes Agiles (Scrum, Kanban)</br>

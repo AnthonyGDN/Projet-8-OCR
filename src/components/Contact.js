@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css'; 
 
 function Contact() {
+  const [showEmailModal, setShowEmailModal] = useState(false);
+
+  // Ouvre la modal et empêche la navigation vers le lien
+  const openEmailModal = (e) => {
+    e.preventDefault();
+    setShowEmailModal(true);
+  };
+
+  // Ferme la modal
+  const closeEmailModal = (e) => {
+    e.stopPropagation(); // Évite la fermeture immédiate si on clique dans la modal
+    setShowEmailModal(false);
+  };
+
   return (
     <main className="contact-page">
       <h2>Contact</h2>
@@ -9,7 +23,8 @@ function Contact() {
 
       <ul className="contact-list">
         <li>
-          <a href="anthony.gdn0@gmail.com">
+          {/* Au lieu de rediriger vers l'adresse, on ouvre une modal */}
+          <a href="mailto:anthony.gdn0@gmail.com" onClick={openEmailModal}>
             <span></span>
             <span></span>
             <span></span>
@@ -21,7 +36,7 @@ function Contact() {
             />
           </a>
 
-          <a href="https://www.linkedin.com/in/anthony-gdn-0a05b235a/">
+          <a href="https://www.linkedin.com/in/anthony-gdn/">
             <span></span>
             <span></span>
             <span></span>
@@ -46,6 +61,17 @@ function Contact() {
           </a>
         </li>
       </ul>
+
+      {/* Modal pour afficher l'adresse email */}
+      {showEmailModal && (
+        <div className="modal" onClick={closeEmailModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <h3>Adresse e‑mail</h3>
+            <p>anthony.gdn0@gmail.com</p>
+            <button onClick={() => setShowEmailModal(false)}>Fermer</button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
