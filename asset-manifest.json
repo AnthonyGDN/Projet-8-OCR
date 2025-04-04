@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Projet-8-OCR/static/css/main.f5ad4f43.css",
+    "main.js": "/Projet-8-OCR/static/js/main.f4dd358a.js",
+    "index.html": "/Projet-8-OCR/index.html",
+    "main.f5ad4f43.css.map": "/Projet-8-OCR/static/css/main.f5ad4f43.css.map",
+    "main.f4dd358a.js.map": "/Projet-8-OCR/static/js/main.f4dd358a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5ad4f43.css",
+    "static/js/main.f4dd358a.js"
+  ]
+}
