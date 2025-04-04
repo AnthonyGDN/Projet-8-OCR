@@ -23,7 +23,6 @@ function Contact() {
 
       <ul className="contact-list">
         <li>
-          {/* Au lieu de rediriger vers l'adresse, on ouvre une modal */}
           <a href="mailto:anthony.gdn0@gmail.com" onClick={openEmailModal}>
             <span></span>
             <span></span>
@@ -62,7 +61,6 @@ function Contact() {
         </li>
       </ul>
 
-      {/* Modal pour afficher l'adresse email */}
       {showEmailModal && (
         <div className="modal" onClick={closeEmailModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

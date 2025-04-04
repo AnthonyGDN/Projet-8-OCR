@@ -18,9 +18,22 @@ body {
   color: var(--dark-color);
 }
 
+html, body {
+  height: 100%;       
+  margin: 0; 
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;   /* Au moins toute la hauteur de la fenêtre */
+}
+
 main {
   margin: 2rem auto;
   padding: 0 1rem;
+  flex: 1;            
 }
 
 /* Titres */
@@ -80,12 +93,34 @@ p {
 
 /* Footer */
 .footer {
-  position: fixed;     
-  left: 0;             
-  bottom: 0;           
-  width: 100%;         
   background-color: var(--dark-color);
   color: var(--white);
   text-align: center;
   padding: 1rem;
+}
+
+
+/* ------------------------------
+          Media Queries
+   ------------------------------ */
+
+@media (max-width: 576px) {
+  main {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .navbar {
+    height: auto;      
+    padding: 1rem;    
+  }
+
+  .navbar ul {
+    align-items: flex-start; 
+    gap: 0.5rem;             
+  }
+
+  .navbar li {
+    margin: 0; 
+  }
 }

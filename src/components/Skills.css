@@ -91,4 +91,13 @@
   .modal-content button:hover {
     background-color: #555;
   }
+
+  /* ------------------------------
+          Media Queries
+   ------------------------------ */
   
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr; /* Une seule colonne */
+    }
+  }
