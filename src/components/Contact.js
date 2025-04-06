@@ -29,7 +29,7 @@ function Contact() {
             <span></span>
             <span></span>
             <img 
-              src="/EMAILLOGO.png" 
+              src={process.env.PUBLIC_URL + "/EMAILLOGO.png"} 
               alt="Email" 
               className="icon-img"
             />
@@ -41,7 +41,7 @@ function Contact() {
             <span></span>
             <span></span>
             <img 
-              src="/LINDEDINLOGO.png" 
+              src={process.env.PUBLIC_URL + "/LINDEDINLOGO.png"} 
               alt="LinkedIn" 
               className="icon-img"
             />
@@ -53,7 +53,7 @@ function Contact() {
             <span></span>
             <span></span>
             <img 
-              src="/GITLOGO.png" 
+              src={process.env.PUBLIC_URL + "/GITLOGO.png"} 
               alt="GitHub" 
               className="icon-img"
             />

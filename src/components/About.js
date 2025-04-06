@@ -8,7 +8,7 @@ function About() {
       <div className="about-container">
         <div className="about-image">
           <img 
-            src="/HMMM.png" 
+            src={process.env.PUBLIC_URL + "/HMMM.png"} 
             alt="Portrait de GADON Anthony" 
           />
         </div>

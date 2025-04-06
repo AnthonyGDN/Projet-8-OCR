@@ -101,7 +101,7 @@ function Skills() {
           >
             <h3>{skill.title}</h3>
             <hr />
-            <img src={skill.image} alt={skill.title} />
+            <img src={process.env.PUBLIC_URL + skill.image} alt={skill.title} />
           </div>
         ))}
       </div>

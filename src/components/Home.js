@@ -53,7 +53,7 @@ function Home() {
       </div>
 
       <div className="home-image">
-        <img src="/HomePic1.jpg" alt="HomePic1" />
+        <img src={process.env.PUBLIC_URL + '/HomePic1.jpg'} alt="HomePic1" />
       </div>
     </main>
   );

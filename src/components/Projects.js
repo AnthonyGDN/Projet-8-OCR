@@ -71,7 +71,7 @@ function Projects() {
                 </div>
                 <div className="project-image">
                   <img 
-                    src={project.image} 
+                    src={process.env.PUBLIC_URL + project.image} 
                     alt={project.title} 
                   />
                 </div>
