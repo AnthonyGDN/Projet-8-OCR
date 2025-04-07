@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './Projects.css'; 
 
 function Projects() {
-  // État pour connaître l'ID du projet actuellement "ouvert"
   const [expandedProjectId, setExpandedProjectId] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImages, setCurrentImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const projects = [
     {
       id: 1,
@@ -16,7 +19,7 @@ function Projects() {
       Lors de la production de ce projet j'ai ainsi appris à utiliser des outils tel que Lighthouse, Wave, 
       Rich Snippet ou encore le site validator.w3.</br></br> 
       Voici le lien GitHub du projet : https://github.com/AnthonyGDN/Projet-4-OCR`,
-      image: '/PROJECT1.png',
+      images: ['/PROJECT1-1.png', '/PROJECT1-2.png', '/PROJECT1-3.png', '/PROJECT1-4.png'],
     },
     {
       id: 2,
@@ -27,7 +30,7 @@ function Projects() {
       Lors de ce projet j'ai ainsi découvert la méthode de développement de site avec l'utilisation de react 
       et des outils conçue autour de React comme React Router par exemple.</br></br>
       Voici le lien GitHub du projet : https://github.com/AnthonyGDN/Projet-5-OCR`,
-      image: '/PROJECT2.png',
+      images: ['/PROJECT2-1.png', '/PROJECT2-2.png', '/PROJECT2-3.png'],
     },
     {
       id: 3,
@@ -40,7 +43,7 @@ function Projects() {
       Enfin, je également sais implémenté une API (Application Programming Interface) 
       et vérifier les permissions pour utilisé les opérations CRUD.</br></br> 
       Voici le lien GitHub du projet : https://github.com/AnthonyGDN/Projet6-OCR`,
-      image: '/PROJECT3.png',
+      images: ['/PROJECT3-1.png', '/PROJECT3-2.png', '/PROJECT3-3.png', '/PROJECT3-4.png'],
     },
   ];
 
@@ -57,12 +60,12 @@ function Projects() {
       {projects.map((project) => (
         <div key={project.id} className="project-container">
           <div 
-            className="project-banner" 
-            onClick={() => toggleProject(project.id)}>
-            <h3>{project.title}</h3>
-          </div>
+          className="project-banner" 
+          onClick={() => toggleProject(project.id)}>
+          <h3>{project.title}</h3>
+          <span className={`arrow-icon ${expandedProjectId === project.id ? 'open' : ''}`}>&#9650;</span>
+        </div>
 
-          {/* Contenu déployé si le projet est "expanded" */}
           {expandedProjectId === project.id && (
             <div className="project-details">
               <div className="project-details-content">
@@ -71,8 +74,14 @@ function Projects() {
                 </div>
                 <div className="project-image">
                   <img 
-                    src={process.env.PUBLIC_URL + project.image} 
+                    src={process.env.PUBLIC_URL + project.images[0]} 
                     alt={project.title} 
+                    onClick={() => {
+                      setCurrentImages(project.images);
+                      setCurrentImageIndex(0);
+                      setModalOpen(true);
+                    }}
+                    style={{ cursor: 'pointer' }}
                   />
                 </div>
               </div>
@@ -80,6 +89,25 @@ function Projects() {
           )}
         </div>
       ))}
+      {modalOpen && (
+        <div className="modal-overlay" onClick={() => setModalOpen(false)}>
+          <div className="project-modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-button" onClick={() => setModalOpen(false)}>&times;</span>
+            <img 
+              src={process.env.PUBLIC_URL + currentImages[currentImageIndex]} 
+              alt="Galerie projet" 
+            />
+            <div className="modal-nav">
+              <button onClick={() => setCurrentImageIndex((currentImageIndex - 1 + currentImages.length) % currentImages.length)}>
+                ‹
+              </button>
+              <button onClick={() => setCurrentImageIndex((currentImageIndex + 1) % currentImages.length)}>
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

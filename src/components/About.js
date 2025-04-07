@@ -11,7 +11,23 @@ function About() {
             src={process.env.PUBLIC_URL + "/HMMM.png"} 
             alt="Portrait de GADON Anthony" 
           />
+
+          {/* CV - Affiché sur desktop et tablette */}
+          <div className="cv-download cv-desktop">
+            <p className="cv-download-title">Télécharger Mon CV</p>
+            <a 
+              href={process.env.PUBLIC_URL + "/CV-Gadon-Anthony.pdf"} 
+              download 
+              className="cv-image-link"
+            >
+              <img 
+                src={process.env.PUBLIC_URL + "/cv-icon.jpg"} 
+                alt="Télécharger le CV"
+              />
+            </a>
+          </div>
         </div>
+
         <div className="about-text">
           <h2>À propos de moi</h2>
           <p>
@@ -49,10 +65,25 @@ function About() {
           </p>
 
           <p>
-          ... J'en ai déjà dit pas mal, donc si vous voulez en savoir plus, je vous invite à directement 
-          me  <Link to="/contact">contacter</Link> !
+            ... J'en ai déjà dit pas mal, donc si vous voulez en savoir plus, je vous invite à directement 
+            me <Link to="/contact">contacter</Link> !
           </p>
         </div>
+      </div>
+
+      {/* CV - Affiché seulement sur mobile */}
+      <div className="cv-download cv-mobile">
+        <p className="cv-download-title">Télécharger Mon CV</p>
+        <a 
+          href={process.env.PUBLIC_URL + "/CV-Gadon-Anthony.pdf"} 
+          download 
+          className="cv-image-link"
+        >
+          <img 
+            src={process.env.PUBLIC_URL + "/cv-icon.jpg"} 
+            alt="Télécharger le CV"
+          />
+        </a>
       </div>
     </main>
   );

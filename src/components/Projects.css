@@ -1,81 +1,178 @@
 /* Conteneur principal de la page */
 .projects-page {
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto ;
-    padding: 0 1rem;
-  }
-  
-  /* Chaque "bloc" de projet */
-  .project-container {
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Le bandeau cliquable */
-  .project-banner {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Au survol, change légèrement le fond */
-  .project-banner:hover {
-    background-color: #efefef;
-  }
-  
-  .project-banner h3 {
-    margin: 0;
-  }
-  
-  /* Le contenu déployé */
-  .project-details {
-    border: 1px solid #ddd;
-    border-top: none; 
-    padding: 1rem;
-    background-color: #fff;
-    animation: expand 0.3s ease-out; 
-  }
-  
-  /* Disposition texte + image */
-  .project-details-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Le texte occupe de l'espace à gauche */
-  .project-text {
-    flex: 1;
-    margin-right: 1rem;
-  }
-  
-  /* L'image est à droite */
-  .project-image img {
-    max-width: 300px;
-    height: auto;
-    display: block;
-  }
-  
-  /* Animation d'apparition */
-  @keyframes expand {
-    from {
-      opacity: 0;
-      transform: scaleY(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-  }
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-  /* ------------------------------
-          Media Queries
-   ------------------------------ */
+.project-container {
+  margin-bottom: 1.5rem;
+}
 
-  @media (max-width: 576px) {
-    .project-image {
-      display: none;
-    }
+.project-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-banner:hover {
+  background-color: #efefef;
+}
+
+.project-banner h3 {
+  margin: 0;
+}
+
+.project-details {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 1rem;
+  background-color: #fff;
+  animation: expand 0.3s ease-out;
+}
+
+.project-details-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-text {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.project-image img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+    transform: scaleY(0.9);
   }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* ------------------------------
+      Modal Styles
+------------------------------ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.project-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  max-width: 98vw;
+  max-height: 95vh;
+}
+
+.project-modal-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.modal-nav button {
+  pointer-events: auto;
+  background: black;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.modal-nav button:hover {
+  background: grey;
+}
+
+.arrow-icon {
+  margin-left: auto;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg); /* ▼ flèche vers le bas */
+}
+
+
+/* ------------------------------
+      Media Queries
+------------------------------ */
+@media (max-width: 576px) {
+  .project-image {
+    display: none;
+  }
+}
