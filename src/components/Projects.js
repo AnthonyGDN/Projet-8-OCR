@@ -63,7 +63,7 @@ function Projects() {
           className="project-banner" 
           onClick={() => toggleProject(project.id)}>
           <h3>{project.title}</h3>
-          <span className={`arrow-icon ${expandedProjectId === project.id ? 'open' : ''}`}>&#9650;</span>
+          <span className={`arrow-icon ${expandedProjectId === project.id ? 'open' : ''}`}>&#9660;</span>
         </div>
 
           {expandedProjectId === project.id && (

@@ -6,25 +6,29 @@ function Home() {
   return (
     <main className="home-section">
       <div className="home-content">
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Ici, vous trouverez un aperçu de mon travail et de mes compétences&nbsp;!</p>
+        <h1>Bienvenue sur mon portfolio !</h1>
+        <p>Je suis <strong>Anthony GADON</strong> et ici, vous trouverez un aperçu de mon travail et de mes compétences&nbsp;!</p>
 
         <p>
-          J'ai suivi une formation de développeur web via le site de formation très réputé
+          J'ai suivi une formation de <strong>développeur web</strong> via le site de formation très réputé
           "OpenClassrooms". Tout au long de cette formation, j'ai pu développer toutes les compétences
           nécessaires pour réaliser le travail d'un développeur web.
         </p>
 
         <p>J'ai notamment appris au cours de cette formation&nbsp;:</p>
         <ul>
-          <li>A maîtriser les intégrations web avec le Html et le CSS</li>
-          <li>A rendre les pages web dynamiques grâce à l'utilisation de JavaScript</li>
-          <li>A rendre l'utilisation des sites fluide et instinctive avec l'utilisation de React</li>
-          <li>A m'assurer de la bonne gestion et protection des données du site et de ses utilisateurs avec la maîtrise de NodeJS</li>
-          <li>A savoir optimiser et débugger des sites web</li>
-          <li>A mettre en ligne un site</li>
-          <li>A gérer la gestion de projet pour la création d'un site web</li>
+          <li>A maîtriser les intégrations web avec le <strong>Html</strong> et le <strong>CSS</strong></li>
+          <li>A rendre les pages web dynamiques grâce à l'utilisation de <strong>JavaScript</strong></li>
+          <li>A rendre l'utilisation des sites fluide et instinctive avec l'utilisation de <strong>React</strong></li>
+          <li>A m'assurer de la bonne gestion et protection des données du site et de ses utilisateurs avec la maîtrise de <strong>NodeJS</strong></li>
+          <li>A savoir <strong>optimiser</strong> et <strong>débugger</strong> des sites web</li>
+          <li>A <strong>mettre en ligne</strong> un site</li>
+          <li>A gérer la <strong>gestion de projet</strong> pour la création d'un site web</li>
         </ul>
+
+        <p>
+          Pour résumé, je suis un <strong>jeune développeur web</strong> qui utilise en grande partit <strong>React</strong> dans la constrution de ses sites ! 
+        </p>
 
         <p>
           Pour en savoir plus sur les différentes compétences que je viens de vous lister, je vous invite à vous rendre
